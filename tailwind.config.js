@@ -1,4 +1,6 @@
 /** @type {import('tailwindcss').Config} */
+import colors from "./src/themes/colors.js";
+
 export default {
   content: [
     "./index.html",
@@ -6,10 +8,9 @@ export default {
   ],
   theme: {
     extend: {
-      colors:{
-        'spotify-black':'#121212',
-        'spotify-gris':'#242424',
-      }
+      colors: {
+        ...colors
+      },
     },
   },
   plugins: [],
